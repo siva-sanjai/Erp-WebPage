@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With Us</title>
+ <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styles */
+.connect-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #5d5de0;
+    outline: none;
+}
+
+/* Button Styles */
+/* Button Styles */
+.send-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #5d5de0;
+    border: none;
+   
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%; /* Adjust width for two buttons */
+}
+
+.send-btn:hover {
+    background-color: #4343ad;
+}
+
+/* Back Button Styles */
+.back-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff5733; /* Light orange color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%; /* Adjust width for two buttons */
+}
+
+.back-btn:hover {
+    background-color: #e04e2f; /* Darker orange on hover */
+}
+
+/* Align the buttons next to each other */
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+  
+}
+.bttn{
+    display: flex;
+    gap: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .send-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .send-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
+ </style>
+ <link rel="icon" href="./Hvac-Icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Connect With Us</h1>
+        <form class="connect-form" onsubmit="return handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Current Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter your current location" required>
+            </div>
+            <div class="bttn">
+               
+                <button type="button" class="back-btn" onclick="window.location.href='home.html#prices'">Back</button>
+                <button type="submit" class="send-btn">Send</button>
+            </div>
+           
+        </form>
+    </div>
+    <script>
+          function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            alert("We will contact you soon");
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>

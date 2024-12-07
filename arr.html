@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card">
+        
+    </div>
+    <script>
+        var array=["Santhosh","sanjai",{maths:5,Science:5},[{carmodel:"BMW",carcolor:"black"},
+                                                            {carmodel:"audi",carcolor:"blue"},{carmodel:"audi1",carcolor:"blue1"}],100];
+
+        const arraylist=doc
+        ument.getElementById(card);
+       
+        
+        // array.forEach(i=>{
+
+        //     // console.log(i);
+
+
+        //     // const details=document.createElement('details');
+        //     //    const items=document.createElement('items');
+        //     //  items.textContent=i.array;
+        //  const lists=document.createElement('p');
+        //       lists.classList.add('array');
+                //  lists.textContent=i.array[0];
+               
+                //  console.log("Name:",array[0]);
+                //  console.log("Maths:",array[1].maths);
+                //  console.log("Science:",array[1].Science);
+                //  console.log("Contact:",array[2]);
+                 array.forEach(i=>{
+                    // console.log('print',value);
+                    // if(Array.isArray(value)) {
+                    //     console.log('array value', value);
+                    //     value.forEach(cars=> {
+                    //         // console.log('cars details', cars);
+                    //         console.log('car model = ', cars.carmodel);
+                    //         console.log('cars color =', cars.carcolor);
+                    //     })
+                    // }
+                    if(i==array[3]){
+                        console.log('array', array[3]);
+                        array[3].forEach(a=>{
+                            console.log("car details",a.carcolor);
+                            
+                          })
+                            
+                    }
+                 })
+                //  console.log("CarModel:",array[3][0].carmodel);
+                 
+                 
+                 
+            
+        // //    details.appendChild('list');
+        //    details.appendChild(lists);
+        //    arraylist.appendChild(details);
+
+
+        // })           ;  
+        
+                             
+    </script>
+</body>
+</html>

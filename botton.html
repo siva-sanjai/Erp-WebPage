@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.sidebar {
+  color: aliceblue;
+  height: 300px; /* Ensure it spans the whole height */
+  width: 0; /* Initially set the sidebar width to 0 (hidden) */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar input {
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+}
+
+.sidebar input:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  margin-left: 10px;
+}
+
+.openbtn {
+    writing-mode: vertical-lr;
+ text-orientation: upright;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  /* padding: 10px 15px; */
+  border: none;
+  border-radius: 20px;
+  position: absolute; /* Fixed position */
+  right: 0px; /* Position it on the right */
+  top: 20px; /* Adjust vertical position */
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  
+  padding: 16px;
+  width: 100%; /* Content width is full */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+body {
+  
+  font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+  /* Video as a background */
+  .bg-video {
+    position: fixed; /* Fixed position to stay in the background */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover full width */
+    height: 100%; /* Cover full height */
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Places the video behind all content */
+  }
+</style>
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop>
+    <source src="./bag.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <form action="">
+    <label for="name">Name:</label><br>
+    <input type="text" name="" id="name"><br>
+    <label for="phno">Phone Number:</label><br>
+    <input type="text" name="" id="phno"><br><br><br>
+    <input type="submit" name="" id="submit">
+  </form>
+</div>
+
+<div id="main">
+  <button class="openbtn" onmouseover="openNav()">Contact Us</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px"; /* Open the sidebar by setting width */
+  document.getElementById("main").style.marginRight = "250px"; /* Content is pushed to the left by 250px */
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0"; /* Sidebar disappears */
+  document.getElementById("main").style.marginRight= "0"; /* Content goes back to original position */
+}
+</script>
+
+</body>
+</html>

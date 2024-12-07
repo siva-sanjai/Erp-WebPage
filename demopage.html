@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC ERP Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+    .logo{
+    padding: 5px 20px;
+    display: flex;
+    
+}
+#name{
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    color: rgb(12, 12, 12);
+   
+}
+    .demo-container {
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .demo-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #5d5de0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* Space out the buttons */
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .start-demo-btn {
+      background-color: #5d5de0;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 48%; /* Set the width of the button */
+      transition: background-color 0.3s;
+    }
+
+    .start-demo-btn:hover {
+      background-color: #4343c0;
+    }
+
+    .back-btn {
+      background-color: #777;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 48%; /* Set the width of the button */
+      transition: background-color 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 480px) {
+      .demo-container h1 {
+        font-size: 20px;
+      }
+
+      .form-group label {
+        font-size: 12px;
+      }
+
+      .form-group input {
+        font-size: 12px;
+      }
+
+      .start-demo-btn {
+        font-size: 14px;
+      }
+
+      .back-btn {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <link rel="icon" href="./Hvac-Icon.png">
+</head>
+<body>
+    <section>
+        <div class="logo">
+            <img height="45px" width="40px" src="./Hvac-Icon.png" alt="">
+            <span id="name">HVACErp</span>
+        </div>
+    </section>
+  <div class="demo-container">
+    <h1>Schedule a Demo</h1>
+    <form id="demoForm">
+      <div class="form-group">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="button-container">
+        <button type="button" class="back-btn" onclick="window.location.href='home.html#damo'">Go Back</button>
+        <button type="button" class="start-demo-btn" onclick="startDemo()">Schedule Demo</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function startDemo() {
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (date && time) {
+        alert(`Demo scheduled on ${date} at ${time}.`);
+        window.location.href = "home.html#damo";
+      } else {
+        alert("Please select both date and time for the demo.");
+      }
+    }
+  </script>
+</body>
+</html>

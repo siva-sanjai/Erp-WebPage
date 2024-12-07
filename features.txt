@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #5d5de0;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .feature h5 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .feature a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Section for detailed view */
+        .detailed-view {
+            margin-top: 50px;
+            display: none;
+            text-align: center;
+        }
+
+        .detailed-view img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5d5de0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-btn:hover {
+            background-color: #4b4bc0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Features</h1>
+    </header>
+
+    <div class="container">
+          <!-- Detailed View Section -->
+        <div id="detailed-view" class="detailed-view">
+            <img id="detailed-img" src="" alt="Detailed Image">
+            <h2 id="detailed-title"></h2>
+            <p id="detailed-description"></p>
+            <button class="back-btn" onclick="hideDetail()">Back to Features</button>
+        </div>
+        <!-- Features Grid -->
+        <div class="features">
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img1', 'Inspection-Offer-Order–Invoicing', 'This feature allows you to seamlessly manage your inspections, offers, orders, and invoicing in one place.')">
+                    <img src="./hd1.png" alt="Feature 1">
+                    <h5>Inspection-Offer-Order–Invoicing</h5>
+                </a>
+            </div>
+
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img2', 'Real-Time Monitoring', 'This feature provides live monitoring of HVAC systems, ensuring real-time updates on performance and issues.')">
+                    <img src="./hd2.png" alt="Feature 2">
+                    <h5>Rental & Auto-Invoicing</h5>
+                </a>
+            </div>
+
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img3', 'Energy Efficiency', 'This feature helps track energy consumption and improve efficiency in HVAC systems, saving costs in the long run.')">
+                    <img src="./hd3.png" alt="Feature 3">
+                    <h5>Production Process</h5>
+                </a>
+            </div>
+
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img4', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd4.png" alt="Feature 4">
+                    <h5>Warehouse and Logistics</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd5.png" alt="Feature 5">
+                    <h5>Customers, Contacts, Leads</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd6.png" alt="Feature 5">
+                    <h5>Office 365 SharePoint Integration</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd7.png" alt="Feature 5">
+                    <h5>Quick Email Storage</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd8.png" alt="Feature 5">
+                    <h5>Reports and Statistics</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd11.png" alt="Feature 5">
+                    <h5>Notification of Expiration and Service Time</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd12.png" alt="Feature 5">
+                    <h5>Task Management</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd9.png" alt="Feature 5">
+                    <h5>SMS Mailings</h5>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="javascript:void(0)" onclick="showDetail('img5', 'HVAC Scheduling', 'Manage HVAC schedules effectively to optimize workforce utilization and reduce downtime.')">
+                    <img src="./hd10.png" alt="Feature 5">
+                    <h5>Integration with Accounting Systems</h5>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function showDetail(imageSrc, title, description) {
+            // Set the detailed view content
+            document.getElementById('detailed-img').src = './' + imageSrc + '.png';  // Change the path if needed
+            document.getElementById('detailed-title').innerText = title;
+            document.getElementById('detailed-description').innerText = description;
+
+            // Hide the features grid and show the detailed view
+            document.querySelector('.features').style.display = 'none';
+            document.getElementById('detailed-view').style.display = 'block';
+        }
+
+        function hideDetail() {
+            // Show the features grid and hide the detailed view
+            document.querySelector('.features').style.display = 'grid';
+            document.getElementById('detailed-view').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
